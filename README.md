@@ -5,6 +5,10 @@ A clickable, pixel-matched build of the Figma file
 covering three roles: **Student**, **GSHA** (event creator) and **GSec** (approver).
 It is a portfolio demo, so fidelity to the Figma file comes first. Nothing was redesigned.
 
+**Live demo:** https://hanumantk.github.io/insti-app-figma/
+(start at [/login](https://hanumantk.github.io/insti-app-figma/login); the role switcher is at the bottom-left).
+The hosted build uses fallback fonts, because the licensed font files aren't public (see § Fonts).
+
 The iterated version, with a review-focused redesign and live insti.app posts, is in
 [Hanumantk/insti-app-redesign](https://github.com/Hanumantk/insti-app-redesign).
 
@@ -28,6 +32,7 @@ back to Helvetica Neue (if installed) or Arial, and the QA diffs will be higher.
 | `npm run qa` | Screenshot every Figma frame state at 1512px → `qa/<name>-build.png` |
 | `npm run qa:diff` | Compare against `qa/<name>-figma.png` → `qa/compare/<name>.png` (Figma, Build, Diff) and a mismatch table |
 | `npm run test:loop` | Run the demo script below end to end in Chromium, including after a reload |
+| `npm run deploy` | Build for GitHub Pages and publish `dist/` to the `gh-pages` branch (the live demo) |
 
 ## Role switcher (demo control, not part of the design)
 
