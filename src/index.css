@@ -1,0 +1,28 @@
+@tailwind base;
+/* Vertical metrics: Figma lays text out with the hhea values; Chrome on Windows would use the larger OS/2 win values. */
+@tailwind components;
+@tailwind utilities;
+
+/* Font files copied from the designer's machine (see README: licensing). */
+@font-face { font-family: 'Helvetica Neue Web'; src: url('/fonts/HelveticaNeueRoman.otf') format('opentype'); font-weight: 400; ascent-override: 71.4%; descent-override: 19.8%; line-gap-override: 8.3%; font-display: block; }
+@font-face { font-family: 'Helvetica Neue Web'; src: url('/fonts/HelveticaNeueMedium.otf') format('opentype'); font-weight: 500; ascent-override: 71.4%; descent-override: 19.1%; line-gap-override: 8.3%; font-display: block; }
+@font-face { font-family: 'Helvetica Neue Web'; src: url('/fonts/HelveticaNeueBold.otf') format('opentype'); font-weight: 700; ascent-override: 71.4%; descent-override: 19.8%; line-gap-override: 8.3%; font-display: block; }
+@font-face { font-family: 'Neue Montreal Web'; src: url('/fonts/NeueMontreal-Regular.otf') format('opentype'); font-weight: 400; font-display: block; }
+@font-face { font-family: 'Neue Montreal Web'; src: url('/fonts/NeueMontreal-Medium.otf') format('opentype'); font-weight: 500; font-display: block; }
+@font-face { font-family: 'Neue Montreal Web'; src: url('/fonts/NeueMontreal-Bold.otf') format('opentype'); font-weight: 700; font-display: block; }
+
+:root { --z: 1; }
+
+html, body { margin: 0; background: #F4F8FF; }
+body { -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { display: block; }
+
+/* "opsz" 14 matches the DM Sans optical size the Figma wordmark uses. */
+.font-dm { font-variation-settings: 'opsz' 14; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@layer base {
+  input, textarea { background: transparent; outline: none; resize: none; }
+}
